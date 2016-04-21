@@ -80,4 +80,9 @@ public class CommonTitle extends RelativeLayout implements View.OnClickListener 
 
     private TitleBarCallback mCallback;
 
+    public void setOnBtnBackListener(TitleBarCallback mCallback){
+        this.mCallback = mCallback;
+
+    }
+
 }

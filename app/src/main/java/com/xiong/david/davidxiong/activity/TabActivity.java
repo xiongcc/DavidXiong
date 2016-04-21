@@ -29,6 +29,8 @@ public class TabActivity extends BaseActivity {
 
     @Override
     protected void initData() {
+        mTitleBar.setTitleText("个性化学习");
+        mTitleBar.showmBtnBack(true);
         tab_top.setTab(titleText, false, 18);
         tab_top.setCurrentTab(0);
         tab_top.setTabSelectedListener(new AbstractTextTab.OnTabSelectedListener() {
@@ -38,13 +40,17 @@ public class TabActivity extends BaseActivity {
             }
         });
         studyMainFragment = new StudyMainFragment();
-
         getSupportFragmentManager().beginTransaction().add(R.id.container, studyMainFragment).commit();
     }
 
     @Override
     protected void initEvent() {
-
+        mTitleBar.setOnBtnBackListener(new CommonTitle.TitleBarCallback() {
+            @Override
+            public void onButtonClick(int event) {
+                finish();
+            }
+        });
     }
 
     public static void launch(Context context, String info) {

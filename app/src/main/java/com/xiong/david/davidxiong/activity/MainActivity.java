@@ -13,7 +13,7 @@ import com.xiong.david.davidxiong.view.CommonTitle;
 
 public class MainActivity extends BaseActivity {
 
-    private String[] titleName = new String[]{"tab"};
+    private String[] titleName = new String[]{"指示器","Retrofit"};
     private CommonTitle mTitleBar;
     private ListView mListView;
     private ArrayAdapter<String> mArrayAdapter;
@@ -45,8 +45,11 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 switch (titleName[i]){
-                    case "tab":
+                    case "指示器":
                         TabActivity.launch(MainActivity.this,"");
+                        break;
+                    case "Retrofit":
+                        RetrofitActivity.launch(MainActivity.this);
                         break;
                 }
             }

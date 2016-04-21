@@ -10,13 +10,13 @@ import android.view.Gravity;
 import android.widget.TextView;
 
 /**
+ * 指示器，没有绑定viewpager.
  * Created by ChengChangXiong on 2016/4/7.
  */
 public class TabIndicator extends AbstractTextTab {
     private int mTitleColor = Color.BLACK;
     private int mTitleColorSelected = Color.RED;
 
-    private boolean isReset = false;
     public TabIndicator(Context context) {
         super(context);
     }
@@ -36,14 +36,9 @@ public class TabIndicator extends AbstractTextTab {
 
     @Override
     protected void addTab(String tabText) {
-//        if(isReset){
-//            removeAllViews();
-//            isReset = false;
-//        }
         TextView textView = new TabText(getContext());
         textView.setGravity(Gravity.CENTER);
-        LayoutParams lp;
-        lp = new LayoutParams(0, LayoutParams.MATCH_PARENT);
+        LayoutParams lp = new LayoutParams(0, LayoutParams.MATCH_PARENT);
         lp.weight = 1;
         textView.setText(tabText);
         textView.setTextColor(Color.BLUE);
@@ -87,7 +82,6 @@ public class TabIndicator extends AbstractTextTab {
         @Override
         protected void onDraw(Canvas canvas) {
             super.onDraw(canvas);
-
             final int width = getMeasuredWidth();
             final int height = getMeasuredHeight();
             if (isSelected() && marked) {
