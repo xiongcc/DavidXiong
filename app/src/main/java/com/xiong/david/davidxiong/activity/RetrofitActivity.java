@@ -37,7 +37,6 @@ public class RetrofitActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
          clientService = RetrofitManager.getService();
-
     }
     @OnClick({R.id.query_view, R.id.query_rxjava_view, R.id.duo_shuo})
     public void onClick(View view) {
@@ -73,14 +72,13 @@ public class RetrofitActivity extends AppCompatActivity {
 
                     @Override
                     public void onNext(PhoneResult result) {
-                        if (result != null && result.getErrNum() == 0) {
-                            PhoneResult.RetDataEntity entity = result.getRetData();
-                            resultView.append("地址：" + entity.getCity());
-                        }
+                            if (result != null && result.getErrNum() == 0) {
+                                PhoneResult.RetDataEntity entity = result.getRetData();
+                                resultView.append("地址：" + entity.getCity());
+                            }
                     }
                 });
     }
-
     private void query() {
         resultView.setText("");
         String number = phoneView.getText().toString();
@@ -107,6 +105,7 @@ public class RetrofitActivity extends AppCompatActivity {
             }
         });
     }
+
     public static void launch(Context context) {
         Intent intent = new Intent(context, RetrofitActivity.class);
         context.startActivity(intent);

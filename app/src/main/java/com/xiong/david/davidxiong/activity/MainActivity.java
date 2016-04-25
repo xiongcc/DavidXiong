@@ -13,7 +13,7 @@ import com.xiong.david.davidxiong.view.CommonTitle;
 
 public class MainActivity extends BaseActivity {
 
-    private String[] titleName = new String[]{"指示器","Retrofit"};
+    private String[] titleName = new String[]{"指示器","Retrofit","RxJava"};
     private CommonTitle mTitleBar;
     private ListView mListView;
     private ArrayAdapter<String> mArrayAdapter;
@@ -51,6 +51,9 @@ public class MainActivity extends BaseActivity {
                     case "Retrofit":
                         RetrofitActivity.launch(MainActivity.this);
                         break;
+                    case "RxJava":
+                        RxJavaActivity.launch(MainActivity.this);
+                        break;
                 }
             }
         });
@@ -60,5 +63,6 @@ public class MainActivity extends BaseActivity {
         Intent intent = new Intent(context, MainActivity.class);
         context.startActivity(intent);
     }
+
 
 }
