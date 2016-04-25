@@ -23,7 +23,9 @@ import retrofit2.Response;
 import rx.Observer;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
-
+/**
+ * Created by xcc on 2016/4/25.
+ */
 public class RetrofitActivity extends AppCompatActivity {
     @Bind(R.id.phone_view)
     EditText phoneView;
