@@ -19,6 +19,7 @@ public class LoginActivity extends BaseActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);//隐藏标题
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);//设置全屏
+
         return R.layout.activity_login;
     }
 
