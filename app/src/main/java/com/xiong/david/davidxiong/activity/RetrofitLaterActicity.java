@@ -4,11 +4,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 
 import com.xiong.david.davidxiong.R;
 import com.xiong.david.davidxiong.bean.ZhaZha;
-import com.xiong.david.davidxiong.http.RetrofitManager;
 import com.xiong.david.davidxiong.http.RetrofitManagerLater;
 import com.xiong.david.davidxiong.model.BaseSubscriber;
 
@@ -28,9 +28,9 @@ public class RetrofitLaterActicity extends AppCompatActivity {
 
         mTextView = (TextView) findViewById(R.id.textView);
     }
-    public void go() {
+    public void go(View s) {
 
-        final Observable<ZhaZha> zhaZha = RetrofitManager.getService().getZhaZha();
+        final Observable<ZhaZha> zhaZha = RetrofitManagerLater.getService().getZhaZha();
 
         RetrofitManagerLater.ioToMainThread(zhaZha, new BaseSubscriber<ZhaZha>(RetrofitLaterActicity.this
         ) {
@@ -43,7 +43,7 @@ public class RetrofitLaterActicity extends AppCompatActivity {
 
     }
     public static void launch(Context context) {
-        Intent intent = new Intent(context, RetrofitActivity.class);
+        Intent intent = new Intent(context, RetrofitLaterActicity.class);
         context.startActivity(intent);
     }
 }

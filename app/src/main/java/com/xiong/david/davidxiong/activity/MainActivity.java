@@ -13,7 +13,7 @@ import com.xiong.david.davidxiong.view.CommonTitle;
 
 public class MainActivity extends BaseActivity {
 
-    private String[] titleName = new String[]{"指示器", "RetrofitManagerLater", "RxJava","RetrofitLater"};
+    private String[] titleName = new String[]{"指示器", "Retrofit", "RxJava","RetrofitLater"};
     private CommonTitle mTitleBar;
     private ListView mListView;
     private ArrayAdapter<String> mArrayAdapter;
@@ -37,6 +37,7 @@ public class MainActivity extends BaseActivity {
                 titleName);
         //绑定适配器
         mListView.setAdapter(mArrayAdapter);
+
     }
 
     @Override
@@ -48,7 +49,8 @@ public class MainActivity extends BaseActivity {
                     case "指示器":
                         TabActivity.launch(MainActivity.this, "");
                         break;
-                    case "RetrofitManagerLater":
+                    case "Retrofit":
+
                         //一种Retrofit的,认识Retrofit
                         RetrofitActivity.launch(MainActivity.this);
                         break;
