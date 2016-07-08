@@ -11,8 +11,8 @@ import com.xiong.david.davidxiong.base.BaseActivity;
 import com.xiong.david.davidxiong.model.EndAnimatorListener;
 
 public class LoginActivity extends BaseActivity {
-
     private ImageView mImgBackgroud;
+
     @Override
     protected int setLayoutId() {
         requestWindowFeature(Window.FEATURE_NO_TITLE);//隐藏标题
@@ -20,6 +20,7 @@ public class LoginActivity extends BaseActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);//设置全屏
         return R.layout.activity_login;
     }
+
 
     @Override
     protected void initView() {

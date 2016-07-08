@@ -9,9 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class RetrofitManager {
 
-    /**
-     * HOST地址
-     */
+    /** HOST地址*/
     public static final String BASE_URL = "http://apis.baidu.com";
     /**
      * 开发者Key

@@ -1,6 +1,7 @@
 package com.xiong.david.davidxiong.http;
 
 import com.xiong.david.davidxiong.bean.PhoneResult;
+import com.xiong.david.davidxiong.bean.ZhaZha;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -23,4 +24,7 @@ public interface ClientService {
     Observable<PhoneResult> getPhoneResult(@Header("apikey") String apikey,
                                            @Query("phone") String phone);
 
+
+    @GET("/api/xapi.ashx/info.json?key=bd_hyrzjjfb4modhj&size=10&page=1")
+    Observable<ZhaZha> getZhaZha();
 }
