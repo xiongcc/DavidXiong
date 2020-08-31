@@ -16,7 +16,6 @@ public abstract class BaseActivity extends FragmentActivity {
         initEvent();
     }
 
-
     protected abstract int setLayoutId();
 
     protected abstract void initView();

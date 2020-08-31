@@ -66,7 +66,6 @@ public class StudyMainFragment extends BaseFragment implements ViewPager.OnPageC
 
     @Override
     public void onPageSelected(int position) {
-//        pageListener.onItemPosiont(position);
         tab_bottom.setCurrentTab(position);
     }
 
@@ -90,7 +89,6 @@ public class StudyMainFragment extends BaseFragment implements ViewPager.OnPageC
         @Override
         public Fragment getItem(int position) {
             itemFragment = new StudyItemFragment();
-
             return itemFragment;
         }
 

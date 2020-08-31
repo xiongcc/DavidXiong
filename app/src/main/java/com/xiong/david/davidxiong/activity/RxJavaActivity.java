@@ -21,6 +21,7 @@ import rx.Observable;
 import rx.Subscriber;
 import rx.functions.Action1;
 import rx.functions.Func1;
+
 /**
  * Created by xcc on 2016/4/25.
  * RxAndroid请参考RetrofitActivity
@@ -163,17 +164,18 @@ public class RxJavaActivity extends AppCompatActivity {
                     @Override
                     public void onCompleted() {
                         //当全部数据完成后会调用
-                        Log.d("tag","onCompleted");
+                        Log.d("tag", "onCompleted");
                     }
+
 
                     @Override
                     public void onError(Throwable e) {
-                        Log.d("tag",e.getMessage());
+                        Log.d("tag", e.getMessage());
                     }
 
                     @Override
                     public void onNext(String s) {
-                        Log.d("tag","onNext s="+s);
+                        Log.d("tag", "onNext s=" + s);
                         textView.append(s + "  ");
                     }
                 });
